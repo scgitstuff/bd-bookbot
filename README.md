@@ -4,8 +4,8 @@ BookBot is my first [Boot.dev](https://www.boot.dev) project!
 
 # "Book Bot" project
 
--   https://www.boot.dev/
--   https://github.com/scgitstuff/bookbot
+- https://www.boot.dev/
+- https://github.com/scgitstuff/bd-bookbot
 
 # Frankenstein
 
