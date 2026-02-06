@@ -5,7 +5,7 @@ def countWords(s: str) -> int:
 
 
 def countChars(s: str) -> dict[str, int]:
-    chars = {}
+    chars: dict[str, int] = {}
     low = s.lower()
 
     for i in range(len(low)):
@@ -22,13 +22,13 @@ def sortChars(chars: dict[str, int]) -> list[dict[str, int]]:
     def sort_on(d: dict[str, int]):
         return next(iter(d.values()))
 
-    lst = list(map(lambda c: {c: chars[c]}, chars))
+    # type stuff got confused, x just to get rid of errors
+    x = map(lambda c: {c: chars[c]}, chars)
+    lst = list(x)
     lst.sort(reverse=True, key=sort_on)
 
     return lst
 
 
-def filterChars(chars: dict[str, int]) -> list[dict[str, int]]:
-    chars = dict(filter(lambda c: c[0].isalpha(), chars.items()))
-
-    return chars
+def filterChars(chars: dict[str, int]) -> dict[str, int]:
+    return dict(filter(lambda c: c[0].isalpha(), chars.items()))
