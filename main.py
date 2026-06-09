@@ -1,8 +1,13 @@
+import sys
+
 from stats import countWords
 from stats import countChars
 from stats import sortChars
 from stats import filterChars
-import sys
+
+# from stats import chars_dict_to_sorted_list
+
+# import sys
 
 
 def main():
@@ -16,15 +21,24 @@ def main():
     # print(frank)
 
     # 2.4
-    # print(f"{countWords(frank)} words found in the document")
+    # words = countWords(frank)
+    # print()
+    # print(f"Found {words} total words")
 
     # 2.6
-    # print(countChars(frank))
+    # chars = countChars(frank)
+    # print()
+    # print(chars)
 
     # 3.1
-    # report(frank)
+    # tuples = chars_dict_to_sorted_list(chars)
+    # print()
+    # print(tuples)
 
     # 3.2
+    # report(frank)
+
+    # 3.3
     # print(sys.argv)
     if len(sys.argv) != 2:
         print("Usage: python3 main.py <path_to_book>")
@@ -36,6 +50,7 @@ def main():
 
 
 def report(book: str):
+    print("============ BOOKBOT ============")
     chars = countChars(book)
     print("----------- Word Count ----------")
     print(f"Found {countWords(book)} total words")

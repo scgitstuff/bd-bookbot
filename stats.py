@@ -32,3 +32,15 @@ def sortChars(chars: dict[str, int]) -> list[dict[str, int]]:
 
 def filterChars(chars: dict[str, int]) -> dict[str, int]:
     return dict(filter(lambda c: c[0].isalpha(), chars.items()))
+
+
+def chars_dict_to_sorted_list(chars: dict[str, int]) -> list[tuple[str, int]]:
+
+    def sort_on(t: tuple[str, int]):
+        return t[1]
+
+    x = map(lambda c: (c, chars[c]), chars)
+    lst = list(x)
+    lst.sort(reverse=True, key=sort_on)
+
+    return lst
